@@ -2,7 +2,10 @@
 ACMICPC #2675
 Iterate each element in a string n times.
 input>> '3 ABC'
-out>> 'AAABBBCCC'
+output>> 'AAABBBCCC'
+
+note:
+In order to use strlen() function, include <string.h> or <cstring>.
 */
 #include <stdio.h>
 #include <string>
