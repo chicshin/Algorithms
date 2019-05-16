@@ -8,6 +8,15 @@ Count the numbers with arr[0]-arr[1]==arr[1]-arr[2].
 
 note:
 1~10 and 10~100 has arthmetic sequence itself.
+
+int i,n,s;
+main()
+{
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+        i<100?s++:i/100+i%10==i/10%10*2?s++:s;
+	printf("%d",s);
+}
 */
 
 #include <stdio.h>
