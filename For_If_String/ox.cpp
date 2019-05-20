@@ -1,5 +1,9 @@
+/*
+ACMICPC #8958
+score of "OOXXOXXOOO" is 1+2+0+0+1+0+0+1+2+3 = 10.
+*/
+
 #include <stdio.h>
-#include <string.h>
 
 using namespace std;
 
