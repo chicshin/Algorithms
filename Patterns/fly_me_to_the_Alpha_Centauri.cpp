@@ -2,6 +2,7 @@
 ACMICPC #1011
 Count the shortest paths of warps
 */
+
 #include <stdio.h>
 #include <string.h>
 #include <string>
@@ -41,3 +42,24 @@ int main()
         printf("%lld\n", i*2-1+remaining);
     }
 }
+
+//solution 2
+// int main()
+// {
+//     int T;
+//     scanf("%d", &T);
+//     while(T--)
+//     {
+//         int x, y, result=1;
+//         long long gap, pos=1;
+//         scanf("%d %d", &x, &y);
+//         gap=y-x;
+//         for(int i=2; pos<gap; ++i)
+//         {
+//             pos+=i/2;
+//             ++result;
+//         }
+//         if(pos>gap) --result;
+//         printf("%d\n", result);
+//     }
+// }
