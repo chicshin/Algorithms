@@ -2,6 +2,7 @@
 ACMICPC #1193
 Find the factorial in the given index.
 */
+
 #include <stdio.h>
 #include <string.h>
 #include <string>
