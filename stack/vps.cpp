@@ -1,3 +1,6 @@
+/*
+ACMICPC #9012
+*/
 #include <stdio.h>
 #include <string.h>
 #include <string>
@@ -22,7 +25,7 @@ int main() {
         int c = 0;
         for (int j = 0; s[j] && c >= 0; j++) s[j] == '(' ? c++ : c--;
         printf("c=%d\n", c);
-        puts(c ? "NO" : "YES");
+        puts(c ? "NO" : "YES"); /*automatically add  '\0'*/
     }
     return 0;
 }

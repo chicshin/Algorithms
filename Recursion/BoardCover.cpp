@@ -23,10 +23,17 @@ bool set(int board[][20], int y, int x, int H, int W, int type, int delta)
     {
         const int ny = y + coverType[type][i][0];
         const int nx = x + coverType[type][i][1];
+        cout<<"ny="<<ny<<", "<<"nx="<<nx<<endl;
         if(ny<0 || ny>=H || nx<0 || nx>=W)
             ok=false;
         else if((board[ny][nx] += delta) > 1)
             ok=false;
+    }
+    for(int k=0; k<H; ++k)
+    {
+        for(int m=0; m<W; ++m)
+            cout<<board[k][m]<<" ";
+        cout<<endl;
     }
     return ok;
 }
@@ -42,10 +49,12 @@ int cover(int board[][20], int H, int W)
             {
                 y=i;
                 x=j;
+                cout<<"y="<<y<<", "<<"x="<<x<<endl;
                 break;
             }
         }
-        if(y!=-1) break;
+        if(y!=-1)
+            break;
     }
     if(y==-1) { return 1; }
     int ret=0;
@@ -53,6 +62,7 @@ int cover(int board[][20], int H, int W)
     {
         if(set(board, y, x, H, W, type, 1))
             ret+=cover(board, H, W);
+            cout<<"return "<<ret<<endl;
         set(board, y, x, H, W, type, -1);
     }
     return ret;
